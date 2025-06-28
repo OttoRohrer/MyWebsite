@@ -1,0 +1,60 @@
+body {
+  background: black;
+}
+#game {
+  height: 80vmin;
+  width: 80vmin;
+  margin: 10vmin auto;
+  display: flex;
+  position: relative;
+  background: rgb(141, 175, 76);
+  z-index: 1
+}
+
+.snakePart {
+  flex-basis: 20%;
+}
+.snakePart {
+  position: absolute;
+  width: 4.2%;
+  height: 4.2%;
+  border-style: solid;
+  border-color: rgb(141, 175, 76);
+  border-width: 1%;
+  z-index: 3
+}
+div:nth-child(1 of .snakePart) {
+  /* background: red; */
+  top: 36vmin;
+  left: 32vmin;
+}
+div:nth-child(2 of .snakePart) {
+  /* background: red; */
+  top: 36vmin;
+  left: 36.2vmin;
+}
+div:nth-child(3 of .snakePart) {
+  /* background: red; */
+  aspect-ratio: 1;
+  top: 36vmin;
+  left: 40.4vmin;
+}
+div:nth-child(4 of .snakePart) {
+  /* background: red; */
+  aspect-ratio: 1;
+  top: 36vmin;
+  left: 44.7vmin;
+}
+div:nth-child(5 of .snakePart) {
+  top: 36vmin;
+  left: 44.7vmin;
+}
+.apple {
+  background: white;
+  position: absolute;
+  width: 3.3vmin;
+  height: 3.3vmin;
+  border: 0.5vmin solid rgb(141, 175, 76);
+  border-radius: 100%;
+  z-index: 2
+}
