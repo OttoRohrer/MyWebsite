@@ -1,4 +1,12 @@
 h1 {
   color: #cf9e36;
-  margin-left: 45%;
+  margin-left: 40%;
+  font-family: Chalkduster;
+}
+h2 {
+  color: #367bcf;
+  font-family: Chalkduster; 
+  font-size: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
 }
