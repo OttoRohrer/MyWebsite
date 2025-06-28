@@ -18,8 +18,12 @@ body {
 }   
 a {
   color: #367bcf;
+  font-size: 20px;
   font-family: Chalkduster;
 }
 ul li::marker {
-  color:#cf9e36; 
+  color:#87f216; 
+}
+ul {
+  margin-left: 39%;
 }

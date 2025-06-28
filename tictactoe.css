@@ -1,0 +1,65 @@
+#game {
+  background: white;
+  width: 80vmin;
+  height: 80vmin;
+  margin: 10vmin auto;
+  border: 1px solid #aaa;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, 30%);
+  & div:nth-child(1) {
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    transform: translate(17%, 17%);
+    cursor: pointer;
+  }  
+  & div:nth-child(2) {
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    transform: translate(17%, 17%);
+    cursor: pointer;
+  }
+  & div:nth-child(2) {
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    transform: translate(17%, 17%);
+    cursor: pointer;
+  }
+  & div:nth-child(3) {
+    border-bottom: 1px solid #aaa;
+    transform: translate(17%, 17%);
+    cursor: pointer;
+  }
+  & div:nth-child(4) {
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    transform: translate(17%, 17%);
+    cursor: pointer;
+  }
+  & div:nth-child(5) {
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    transform: translate(17%, 17%);
+    cursor: pointer;
+  }
+  & div:nth-child(6) {
+    border-bottom: 1px solid #aaa;
+    transform: translate(17%, 17%);
+    cursor: pointer;
+  }
+  & div:nth-child(7) {
+    border-right: 1px solid #aaa;
+    transform: translate(17%, 17%);
+    cursor: pointer;
+  }
+  & div:nth-child(8) {
+    border-right: 1px solid #aaa;
+    transform: translate(17%, 17%);
+    cursor: pointer;
+  }
+  & div:nth-child(9) {
+    transform: translate(17%, 17%);
+    cursor: pointer;
+  }
+
+}

@@ -1,0 +1,51 @@
+#game {
+  margin: 10vmin auto;
+  width: 80vmin;
+  height: 80vmin;
+  position: relative;
+  background: rgb(10, 18, 21);
+  overflow: hidden;
+}
+#ball {
+  border-radius: 100%;
+  background: white;
+  position: absolute;
+  width: 4%;
+  height: 4%;
+  top: 92%;
+  left: 48%;
+}
+#paddle {
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  width: 20%;
+  height: 3%;
+  top: 96%;
+  left: 40%;
+  right: 60%;
+}
+
+#blocks {
+  display: grid;
+  transform: translate(10%, 12.5%);
+   gap: 1.25%;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(6, 12.32%);
+  grid-template-rows: repeat(3, 3.8%);
+}
+
+.red {
+  background: red;
+  border-radius: 3px;
+}
+.pink {
+  background: hotpink;
+  border-radius: 3px;
+  transform: translate(-1%, -5%);
+}
+.purple {
+  background: blueviolet;
+  border-radius: 3px;
+}
