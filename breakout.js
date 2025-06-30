@@ -133,9 +133,8 @@ function isWin(blocks) {
 }
 
 btn.addEventListener("click", (event) => {
-  if (btn.style.opacity === 1) {
+  if (btn.style.opacity === "1") {
     window.location.reload(true);
   }
 });
 requestAnimationFrame(gameLoop);
-// this should all work!
