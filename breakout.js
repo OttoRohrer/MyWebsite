@@ -70,6 +70,7 @@ function gameLoop() {
   }
   if (y >= 96) {
     btn.style.opacity = "1";
+    btn.style.cursor = "pointer";
     game.style.background = "darkred";
     return;
   }
@@ -82,6 +83,7 @@ function gameLoop() {
   isBallTouchingAnyBlock(blockData, x, y);
   if (isWin(blockData)) {
     btn.style.opacity = "1";
+    btn.style.cursor = "pointer";
     game.style.background = "green";
     return;
   }
@@ -131,6 +133,8 @@ function isWin(blocks) {
 }
 
 btn.addEventListener("click", (event) => {
-  window.location.reload(true);
+  if (btn.style.opacity === 1) {
+    window.location.reload(true);
+  }
 });
 requestAnimationFrame(gameLoop);

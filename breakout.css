@@ -61,7 +61,7 @@ button {
   color: #cf9e36;
   font-size: 70px;
   font-family: Chalkduster;
-  cursor: pointer;
+  cursor: default;
   border: 0px;
   margin: 28vmin 75vmin;
   border-radius: 10px;
