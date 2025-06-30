@@ -138,3 +138,4 @@ btn.addEventListener("click", (event) => {
   }
 });
 requestAnimationFrame(gameLoop);
+// this should all work!
