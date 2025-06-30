@@ -1,11 +1,13 @@
 const ball = document.querySelector("#ball");
 const game = document.querySelector("#game");
 const paddle = document.querySelector("#paddle");
+const btn = document.querySelector("button");
 const blocks = document.querySelectorAll(".block");
 const boundingRect = game.getBoundingClientRect();
 const blockData = [];
 let y = 92;
 let x = 48;
+btn.style.opacity = "0";
 let xVelocity = -0.5;
 let yVelocity = -0.5;
 paddle.style.top = "96%";
@@ -56,7 +58,6 @@ window.addEventListener("pointermove", (event) => {
   paddleLeft = Number(paddle.style.left.replace("%", ""));
 });
 function gameLoop() {
-  // Write any code you want to happen on every animation frame here
   ball.style.top = `${y}%`;
   ball.style.left = `${x}%`;
   x += xVelocity;
@@ -68,6 +69,7 @@ function gameLoop() {
     yVelocity *= -1;
   }
   if (y >= 96) {
+    btn.style.opacity = "1";
     game.style.background = "darkred";
     return;
   }
@@ -77,17 +79,14 @@ function gameLoop() {
     xVelocity = change[0];
     yVelocity = change[1];
   }
-  // Remember to setup the next animation frame before you finish
   isBallTouchingAnyBlock(blockData, x, y);
   if (isWin(blockData)) {
+    btn.style.opacity = "1";
     game.style.background = "green";
     return;
   }
   requestAnimationFrame(gameLoop);
 }
-// This should probably be the final line in your
-// program and the one that sets off the gameLoop.
-
 function dealWithSpeedChange(x, xVelocity, yVelocity) {
   const center = x + 2;
   const percentDistanceFromCenter = (center - (paddleLeft + 10)) / 10;
@@ -131,4 +130,7 @@ function isWin(blocks) {
   return blocks.every((block) => !block.active);
 }
 
+btn.addEventListener("click", (event) => {
+  window.location.reload(true);
+});
 requestAnimationFrame(gameLoop);
