@@ -7,7 +7,6 @@ const boundingRect = game.getBoundingClientRect();
 const blockData = [];
 let y = 92;
 let x = 48;
-btn.style.opacity = "0";
 let xVelocity = -0.5;
 let yVelocity = -0.5;
 paddle.style.top = "96%";
@@ -23,6 +22,7 @@ const YDifference = height + gap;
 let paddleLeft = Number(paddle.style.left.replace("%", ""));
 let blockXCounter = 0;
 let blockYCounter = 0;
+btn.style.opacity = "0";
 for (let block of blocks) {
   if (blockXCounter % 6 === 0) {
     if (blockXCounter !== 0) {
