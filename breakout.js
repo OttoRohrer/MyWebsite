@@ -40,22 +40,27 @@ for (let block of blocks) {
   blockXCounter++;
 }
 window.addEventListener("pointermove", (event) => {
-  const offset =
-    ((event.pageX - boundingRect.left) / boundingRect.width) * 100 - 10;
-  if (event.pageX > boundingRect.right - 42) {
-    paddle.style.left = `80%`;
-    paddleLeft = 80;
+  if (
+    game.style.background !== "darkred" &&
+    game.style.background !== "green"
+  ) {
+    const offset =
+      ((event.pageX - boundingRect.left) / boundingRect.width) * 100 - 10;
+    if (event.pageX > boundingRect.right - 65) {
+      paddle.style.left = `80%`;
+      paddleLeft = 80;
+      paddle.style.right = paddleLeft + 20 + "%";
+      return;
+    } else if (event.pageX < boundingRect.left + 65) {
+      paddle.style.left = `0%`;
+      paddleLeft = 0;
+      paddle.style.right = paddleLeft + 20 + "%";
+      return;
+    }
+    paddle.style.left = `${offset}%`;
     paddle.style.right = paddleLeft + 20 + "%";
-    return;
-  } else if (event.pageX < boundingRect.left + 42) {
-    paddle.style.left = `0%`;
-    paddleLeft = 0;
-    paddle.style.right = paddleLeft + 20 + "%";
-    return;
+    paddleLeft = Number(paddle.style.left.replace("%", ""));
   }
-  paddle.style.left = `${offset}%`;
-  paddle.style.right = paddleLeft + 20 + "%";
-  paddleLeft = Number(paddle.style.left.replace("%", ""));
 });
 function gameLoop() {
   ball.style.top = `${y}%`;
