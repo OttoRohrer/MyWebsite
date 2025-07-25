@@ -64,7 +64,7 @@ button {
   font-family: Chalkduster;
   cursor: default;
   border: 0px;
-  margin: 28vmin 75vmin;
+  margin: auto;
   border-radius: 10px;
   transition: all ease 0.5s;
 }
